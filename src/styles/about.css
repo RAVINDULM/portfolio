@@ -1,0 +1,44 @@
+.about {
+  padding: 2rem 2rem;
+  min-height: 50vh;
+}
+.about-content {
+  display: flex;
+  gap: 2rem;
+}
+.about-image {
+  width: 200px;
+  height: 200px;
+  background-color: #ccc;
+}
+
+
+.about h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.about h2 {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+@media (min-width: 768px) {
+  .about h1 {
+    font-size: 3rem;
+  }
+
+  .about h2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about h1 {
+    font-size: 4rem;
+  }
+
+  .about h2 {
+    font-size: 1.5rem;
+  }
+}
