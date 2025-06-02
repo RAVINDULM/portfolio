@@ -6,14 +6,15 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar__logo">J</div>
       <ul className="navbar__links">
-        <li><a href="#about">about</a></li>
-        <li><a href="#experience">experience</a></li>
-        <li><a href="#project">project</a></li>
-        <li><a href="#contact">contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Project</a></li>
+        <li><a href="#featured-blogs">Blogs</a></li>
+        {/* <li><a href="#contact">Contact</a></li> */}
       </ul>
       <div className="navbar__buttons">
         <button className="btn-outline">Resume</button>
-        <button className="btn-filled">Hire Me</button>
+        <button className="btn-filled"><a href="#contact">Contact Me</a></button>
       </div>
     </nav>
   );

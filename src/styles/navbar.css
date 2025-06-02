@@ -45,3 +45,8 @@
   border: none;
   cursor: pointer;
 }
+
+.btn-filled a {
+  text-decoration: none;
+  color: white;
+}

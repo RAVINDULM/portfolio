@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 import resumeData from "./data/resumeData";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
+import FeaturedBlogs from "./components/FeaturedBlogs";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Education />
       <Projects projects={resumeData.projects} />
       <Skills skills={resumeData.skills} />
+      <FeaturedBlogs blogs={resumeData.blogsData} />
       <Contact />
       <Footer />
     </div>
