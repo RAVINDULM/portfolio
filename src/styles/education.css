@@ -1,21 +1,28 @@
 .education-section {
   padding: 4rem 2rem;
-  background-color: #fff;
+  background-color: #f9f9f9;
   color: #333;
 }
 
 .section-title h1 {
   text-align: start;
   font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .education-item {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid #ccc;
-  padding-top: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
   margin-bottom: 2rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.education-item:hover {
+  transform: translateY(-3px);
 }
 
 .education-left {

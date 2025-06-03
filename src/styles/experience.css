@@ -1,40 +1,82 @@
-.experience {
+.experience-section {
   padding: 4rem 2rem;
-}
-.job {
-  display: flex;
-  gap: 2rem;
-}
-.job-info {
-  width: 200px;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
-.experience h1 {
+.section-title h1 {
+  text-align: start;
   font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
-.experience h2 {
+.experience-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.experience-item:hover {
+  transform: translateY(-3px);
+}
+
+.experience-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.experience-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.experience-details {
+  flex-grow: 1;
+}
+
+.job-role {
   font-size: 1.2rem;
-  color: #666;
+  font-weight: 600;
+}
+
+.company {
+  font-size: 1rem;
+  color: #555;
+}
+
+.experience-date,
+.tech-stack {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.experience-description ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  font-size: 0.95rem;
 }
 
 @media (min-width: 768px) {
-  .experience h1 {
-    font-size: 3rem;
+  .experience-item {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
   }
 
-  .experience h2 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .experience h1 {
-    font-size: 4rem;
+  .experience-left {
+    flex: 1;
+    margin-bottom: 0;
   }
 
-  .experience h2 {
-    font-size: 1.5rem;
+  .experience-description {
+    flex: 2;
   }
 }

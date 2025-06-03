@@ -1,6 +1,6 @@
 const Footer = () => (
   <footer className="footer">
-    <p>© {new Date().getFullYear()} Your Name. All rights reserved.</p>
+    <p>© {new Date().getFullYear()}  Ravindu Madhubhashana. All rights reserved.</p>
   </footer>
 );
 

@@ -9,10 +9,10 @@ function Skills() {
         <div className="skill-category">
           <h3>Languages</h3>
           <ul>
+            <li>Java</li>
             <li>JavaScript</li>
             <li>TypeScript</li>
             <li>Python</li>
-            <li>Java</li>
           </ul>
         </div>
 
@@ -20,8 +20,8 @@ function Skills() {
           <h3>Frameworks</h3>
           <ul>
             <li>React</li>
-            <li>Next.js</li>
-            <li>Express.js</li>
+            {/* <li>Next.js</li>
+            <li>Express.js</li> */}
             <li>Spring Boot</li>
           </ul>
         </div>
@@ -41,7 +41,7 @@ function Skills() {
           <ul>
             <li>MySQL</li>
             <li>MongoDB</li>
-            <li>PostgreSQL</li>
+            {/* <li>PostgreSQL</li> */}
           </ul>
         </div>
       </div>

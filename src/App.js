@@ -19,7 +19,7 @@ function App() {
       <Header name={resumeData.name} role={resumeData.role} />
       <About bio={resumeData.about} />
       <Experience experience={resumeData.experience} />
-      <Education />
+      <Education education={resumeData.education} />
       <Projects projects={resumeData.projects} />
       <Skills skills={resumeData.skills} />
       <FeaturedBlogs blogs={resumeData.blogsData} />
