@@ -12,10 +12,12 @@ import resumeData from "./data/resumeData";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
 import FeaturedBlogs from "./components/FeaturedBlogs";
+import CursorOutline from "./components/CursorOutline";
 
 function App() {
   return (
     <div className="App">
+      <CursorOutline />
       <Header name={resumeData.name} role={resumeData.role} />
       <About bio={resumeData.about} />
       <Experience experience={resumeData.experience} />

@@ -1,0 +1,61 @@
+.back-to-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 1.5rem; /* 6 * 0.25rem = 1.5rem */
+  right: 1.5rem;
+  background-color: #000000;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px; /* full rounded */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease;
+  min-width: fit-content;
+}
+
+.back-to-top:hover {
+  background-color: #ffffff;
+
+}
+
+.back-to-top.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+}
+
+.back-to-top-label {
+  color: white;
+  font-weight: 600;
+  width: 100%;
+  padding-inline-end: 0.5rem;
+  display: none;
+}
+
+.back-to-top-arrow {
+  color: white;
+  font-size: 1.5rem; /* same as text-2xl */
+}
+
+/* Target child elements on hover */
+.back-to-top:hover .back-to-top-label,
+.back-to-top:hover .back-to-top-arrow {
+  color: black;
+}
+
+@media (min-width: 768px) {
+  .back-to-top {
+    justify-content: space-between;
+    border-radius: 0.375rem; /* rounded-md */
+    width: auto;
+    right: 10.5rem;
+  }
+
+  .back-to-top-label {
+    display: inline;
+  }
+}
