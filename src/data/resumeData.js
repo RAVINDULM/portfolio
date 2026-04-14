@@ -112,6 +112,45 @@ const resumeData = {
         "https://miro.medium.com/v2/resize:fit:720/format:webp/1*uwwuNqk56ANGlZplA7qsMA.png",
     },
   ],
+  saasProducts: [
+    {
+      name: "Orbit Focus",
+      slug: "orbit-focus",
+      tagline: "The Deep Work Operating System for Modern Engineers.",
+      problem: "Traditional productivity tools are built for office managers, not deep-thinking engineers. Context switching, notification noise, and fragmented workflows are the enemies of flow state.",
+      solution: "Orbit Focus is a high-performance productivity ecosystem that hardcodes flow state into your workflow. It combines intelligent session tracking, deep-work analytics, and distraction-blocking automation into a single, sleek command center.",
+      status: "Alpha",
+      features: [
+        { title: "Flow Velocity Tracking", desc: "Measure your productivity in 'flow units' rather than just hours clocked." },
+        { title: "Context Guard", desc: "Automatically silences distracting notifications based on your current coding focus." },
+        { title: "Unified Command Center", desc: "Integrate Github, Jira, and Slack directly into your focus timer." }
+      ],
+      tech: ["Next.js", "TurboRepo", "Redis", "WebSockets"],
+      link: "#",
+      waitlistUrl: "#",
+      featured: true,
+    },
+    {
+      name: "SwiftPay",
+      slug: "swift-pay",
+      tagline: "Global payments for local startups.",
+      problem: "Complex cross-border transactions for small businesses.",
+      status: "Coming Soon",
+      tech: ["Java", "Spring Boot", "Stripe"],
+      link: "#",
+      featured: false,
+    }
+  ],
+  brand: {
+    logoText: "RM",
+    tagline: "Building scalable products that matter.",
+    philosophy: "I believe in building software that doesn't just solve problems, but empowers people to achieve more."
+  },
+  contact: {
+    email: "ravindu.kp@gmail.com",
+    linkedin: "https://www.linkedin.com/in/ravindukp/",
+    github: "https://github.com/RAVINDULM",
+  }
 };
 
 export default resumeData;

@@ -1,33 +1,27 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 
-import Header from "./components/Header";
-import About from "./components/About";
-import Projects from "./components/Projects";
-import Skills from "./components/Skills";
-import Experience from "./components/Experience";
+import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
-import resumeData from "./data/resumeData";
-import Education from "./components/Education";
-import Contact from "./components/Contact";
-import FeaturedBlogs from "./components/FeaturedBlogs";
-import CursorOutline from "./components/CursorOutline";
+import HomePage from "./pages/HomePage";
+import ResumePage from "./pages/ResumePage";
 
 function App() {
   return (
-    <div className="App">
-      <CursorOutline />
-      <Header name={resumeData.name} role={resumeData.role} />
-      <About bio={resumeData.about} />
-      <Experience experience={resumeData.experience} />
-      <Education education={resumeData.education} />
-      <Projects projects={resumeData.projects} />
-      <Skills skills={resumeData.skills} />
-      <FeaturedBlogs blogs={resumeData.blogsData} />
-      <Contact />
-      <Footer />
-    </div>
+    <Router>
+      <ScrollToTop />
+      <div className="relative min-h-screen">
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/resume" element={<ResumePage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

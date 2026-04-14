@@ -1,52 +1,33 @@
-import React from "react";
-import "./../styles/projects.css";
-import { FaGithub } from "react-icons/fa";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { FaGithub } from 'react-icons/fa';
+import { ExternalLink } from 'lucide-react';
 
-function Projects({ projects }) {
-  return (
-    <>
-      <section id="projects" className="projects">
-        <h2 className="section-title">Featured Project</h2>
-        <div className="featured-project">
-          <img src="https://github.com/RAVINDULM/beauty-craft/raw/main/public/logo/bannerWhiteBgLessH.png" alt="Project" className="project-image"/>
-          <div className="project-info">
-            <h3>Beauty Craft</h3>
-            <p>Beauty Craft mainly focuses on efficient and user-friendly reservation management as well as managing the organizational work of beauty salons requiring minimum user effort and time.</p>
-            <p className="tech">HTML • CSS • JS • Figma • PHP • MySQL</p>
-            <a
-              href="https://github.com/RAVINDULM/beauty-craft"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="github-icon"
-            >
-              <FaGithub />
+const Projects = ({ projects }) => (
+  <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12 items-start">
+    <p className="text-[#8ba3c1] text-xs font-bold uppercase tracking-[0.2em] pt-1">Projects</p>
+    <div className="divide-y divide-blue-900/20">
+      {projects.map((project, index) => (
+        <motion.div key={project.title} initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: index * 0.08 }}
+          className="flex flex-col sm:flex-row sm:items-start justify-between py-8 group"
+        >
+          <div className="flex-1 pr-8">
+            <h3 className="text-[#e8f0ff] font-bold text-lg mb-2 group-hover:text-[#3b82f6] transition-colors">{project.title}</h3>
+            <p className="text-[#8ba3c1] leading-relaxed text-sm">{project.description}</p>
+          </div>
+          <div className="flex items-center gap-4 mt-4 sm:mt-0 flex-shrink-0">
+            <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-[#8ba3c1] hover:text-[#3b82f6] transition-colors">
+              <FaGithub size={17} />
+            </a>
+            <a href="#" className="text-[#8ba3c1] hover:text-[#06b6d4] transition-colors">
+              <ExternalLink size={17} />
             </a>
           </div>
-        </div>
-      </section>
-
-      <section className="other-projects">
-        <h2 className="section-title">Other Projects</h2>
-        <div className="project-grid">
-          {projects.map((project, idx) => (
-            <div key={idx} className="project-card">
-              <h3>{project.title || "Project Name"}</h3>
-              <p>{project.description || "Brief description..."}</p>
-              <p className="tech">{project.tech || "HTML • CSS • JS"}</p>
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="github-icon-card"
-              >
-                <FaGithub />
-              </a>
-            </div>
-          ))}
-        </div>
-      </section>
-    </>
-  );
-}
+        </motion.div>
+      ))}
+    </div>
+  </div>
+);
 
 export default Projects;
